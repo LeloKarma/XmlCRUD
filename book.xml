@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE books SYSTEM "books.dtd">
+
+<books>
+
+<!-- book -->
+<book>
+
+<!-- Title -->
+<Title>50 Shades of Grey</Title>
+
+<!-- Date of publishment -->
+<datePublished>2015-12-05</datePublished>
+
+<!-- Author -->
+<author>Christian Grey</author>
+
+</book>
+
+<book>
+<Title>The Witcher</Title>
+<datePublished>2017-07-21</datePublished>
+<author>Ann Marie</author>
+</book>
+
+<book>
+<Title>After II</Title>
+<datePublished>2009-02-09</datePublished>
+<author>Paul John</author>
+</book>
+
+<book>
+<Title>Fantasie</Title>
+<datePublished>1997-03-28</datePublished>
+<author>Da Vincii</author>
+</book>
+
+</books>

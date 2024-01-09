@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Web Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Your HTML content here -->
+
+  <table id="myTable">
+    <script>
+
+        // Function to add a new book to the table
+function addBook() {
+  // Prompt the user to enter the details of the new book
+  const title = prompt("Enter the title of the new book:");
+  const datePublished = prompt("Enter the date of publication of the new book:");
+  const author = prompt("Enter the author of the new book:");
+
+  // Create a new row in the table
+  const newRow = document.createElement("tr");
+
+  const titleCell = document.createElement("td");
+  titleCell.textContent = title;
+  newRow.appendChild(titleCell);
+
+  const datePublishedCell = document.createElement("td");
+  datePublishedCell.textContent = datePublished;
+  newRow.appendChild(datePublishedCell);
+
+  const authorCell = document.createElement("td");
+  authorCell.textContent = author;
+  newRow.appendChild(authorCell);
+
+  const actionsCell = document.createElement("td");
+  const editButton = document.createElement("button");
+  editButton.textContent = "Edit";
+  editButton.addEventListener("click", () => {
+    editBook(table.rows.length - 1);
+  });
+  actionsCell.appendChild(editButton);
+
+  const deleteButton = document.createElement("button");
+  deleteButton.textContent = "Delete";
+  deleteButton.addEventListener("click", () => {
+    deleteBook(table.rows.length - 1);
+  });
+  actionsCell.appendChild(deleteButton);
+
+  newRow.appendChild(actionsCell);
+
+  // Append the new row to the table body
+  const tbody = table.getElementsByTagName("tbody")[0];
+  tbody.appendChild(newRow);
+}
+
+// Create the "Add Book" button
+const addButton = document.createElement("button");
+addButton.textContent = "Add Book";
+addButton.addEventListener("click", addBook);
+
+// Insert the button at the top of the table
+const table = document.getElementById("myTable");
+const thead = table.getElementsByTagName("thead")[0];
+const headerRow = thead.getElementsByTagName("tr")[0];
+const actionsHeader = document.createElement("th");
+actionsHeader.appendChild(addButton);
+headerRow.insertBefore(actionsHeader, headerRow.firstChild);
+    </script>
+    <!-- The table will be dynamically generated here by the JavaScript code -->
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>

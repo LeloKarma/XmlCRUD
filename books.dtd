@@ -1,0 +1,6 @@
+<!ELEMENT books(book*)>
+<!ELEMENT book(Title, datePublished, author)>
+<!ELEMENT Title(#PCDATA)>
+<!ELEMENT datePublished(#PCDATA)>
+<!ELEMENT author(#PCDATA)>
+<!-- PCDATA means the tag can parse data -->
